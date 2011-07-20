@@ -1,0 +1,16 @@
+[user]
+	name = Ryan Martinsen
+	email = 
+[github]
+	user = 
+	token = 
+[alias]
+	ci = commit
+	co = checkout
+	b = branch
+	s = status
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+
