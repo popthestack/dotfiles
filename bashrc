@@ -23,3 +23,7 @@ export PS1="\u\[\e[01;32m\]★ $C_LIGHT_BLUE\w$C_CYAN\`ruby -e \"print (%x{git b
 export PS2='\[\e[m\]\[\e[01;31m\]>\[\e[m\] '
 
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
+
+export CC=gcc-4.2
+
+[[ -s "/Users/muaddib/.rvm/scripts/rvm" ]] && source "/Users/muaddib/.rvm/scripts/rvm"  # This loads RVM into a shell session.
