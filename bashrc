@@ -25,4 +25,4 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/opt/loc
 
 export CC=gcc-4.2
 
-[[ -s "/Users/muaddib/.rvm/scripts/rvm" ]] && source "/Users/muaddib/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
