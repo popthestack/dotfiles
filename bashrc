@@ -21,7 +21,7 @@ fi
 export PS1="\u@$PROMPT_HOSTNAME:$C_BLUE\w$C_CYAN$C_RESET$ "
 export PS2='\[\e[m\]\[\e[01;31m\]>\[\e[m\] '
 
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
 
 export CC=gcc-4.2
 
