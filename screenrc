@@ -1,0 +1,21 @@
+vbell           off
+escape          ``
+autodetach      on
+altscreen       on
+startup_message off
+
+defflow auto
+defscrollback 5000
+
+screen -t one 0
+screen -t two 1
+screen -t three 2
+
+#bind V screen -t 'vim' 0 vim
+
+termcapinfo xterm-color kD=\E[3~
+
+#change the hardstatus settings to give an window list at the bottom of the
+#screen, with the time and date and with the current window highlighted
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
