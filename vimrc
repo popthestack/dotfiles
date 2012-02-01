@@ -1,4 +1,5 @@
 set nocompatible
+set encoding=utf-8
 
 syntax on
 set tabstop=4
@@ -34,11 +35,11 @@ endif
 nnoremap / /\v
 vnoremap / /\v
 
-set ignorecase
-set smartcase
-set incsearch
+set ignorecase " searches are case insensitive...
+set smartcase  " ... unless they contain at least one capital letter
+set incsearch  " incremental searching
 set showmatch
-set hlsearch
+set hlsearch   " highlight matches
 
 nnoremap <leader><space> :let @/=''<cr>
 
