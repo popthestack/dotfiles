@@ -65,7 +65,11 @@ __gps1() {
 		if [ "true" = "$(git rev-parse --is-inside-work-tree 2>/dev/null)" ]; then
 
 			# find the parent dir and project name
-			_base_dir=$(git rev-parse --show-toplevel 2>/dev/null)
+			if [ $(git --version|sed -e 's/[a-z \.]//g'|grep -Eo '[[:digit:]]{3}') -ge 170 ]; then
+				_base_dir=$(git rev-parse --show-toplevel 2>/dev/null)
+			else
+				_base_dir=$(readlink -f ./$(git rev-parse --show-cdup))
+			fi
 			_project=$(basename "${_base_dir}")
 			_base_dir="${_base_dir%$_project}"
 			_base_dir="${_base_dir/$HOME/~}"
