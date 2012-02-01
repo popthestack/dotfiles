@@ -18,6 +18,7 @@ else
     alias grep='grep --exclude=".svn" --exclude=".swp"'
 fi
 
+PROMPT_HOSTNAME=''
 export PS1="\u@$PROMPT_HOSTNAME:$C_BLUE\w$C_CYAN$C_RESET$ "
 export PS2='\[\e[m\]\[\e[01;31m\]>\[\e[m\] '
 
