@@ -43,6 +43,8 @@ set hlsearch   " highlight matches
 
 nnoremap <leader><space> :let @/=''<cr>
 
+hi MatchParen cterm=underline ctermbg=none ctermfg=none
+
 "Invisible character colors
 "highlight NonText guifg=#EFEFEF
 "highlight SpecialKey guifg=#EFEFEF
