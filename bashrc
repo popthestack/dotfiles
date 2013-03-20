@@ -1,6 +1,6 @@
 export LANG=en_US.UTF-8
 
-source ~/bin/ansicolor
+# source ~/bin/ansicolor
 source ~/.gps1.bash
 
 # enable color support of ls and also add handy aliases
@@ -19,7 +19,8 @@ else
 fi
 
 PROMPT_HOSTNAME=''
-export PS1="\u@$PROMPT_HOSTNAME:$C_BLUE\w$C_CYAN$C_RESET$ "
+# export PS1="\u@$PROMPT_HOSTNAME:$C_BLUE\w$C_CYAN$C_RESET$ "
+export PS1="\`if [ \$? = 0 ]; then echo \[\e[33m\]\u $PROMPT_HOSTNAME\[\e[0m\]; else echo \[\e[31m\]ಠ_ಠ \[\e[0m\]; fi\`\[\033[01;34m\]\$(~/.rvm/bin/rvm-prompt) \[\033[01;32m\]\w\[\033[00;33m\] \[\033[01;36m\]λ\[\033[00m\] "
 export PS2='\[\e[m\]\[\e[01;31m\]>\[\e[m\] '
 
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
