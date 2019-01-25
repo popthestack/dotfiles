@@ -42,9 +42,7 @@ else
     alias grep='grep --exclude-dir=".git" --exclude=".svn" --exclude=".swp"'
 fi
 
-PROMPT_HOSTNAME=''
-# export PS1="\u@$PROMPT_HOSTNAME:$C_BLUE\w$C_CYAN$C_RESET$ "
-export PS1="\`if [ \$? = 0 ]; then echo \[\e[33m\]\u $PROMPT_HOSTNAME\[\e[0m\]; else echo \[\e[31m\]ಠ_ಠ \[\e[0m\]; fi\`\[\033[01;34m\]\$(~/.rvm/bin/rvm-prompt) \[\033[01;32m\]\w\[\033[00;33m\] \[\033[01;36m\]λ\[\033[00m\] "
+export PS1="\`if [ \$? != 0 ]; then echo \[\e[31m\]ಠ_ಠ \[\e[0m\]; fi\`\[\033[01;34m\]\[\033[01;32m\]\w\[\033[00;33m\] \[\033[01;36m\]λ\[\033[00m\] "
 export PS2='\[\e[m\]\[\e[01;31m\]>\[\e[m\] '
 
 export GOPATH=$HOME/go/bin
