@@ -3,6 +3,14 @@ export LANG=en_US.UTF-8
 # source ~/bin/ansicolor
 source ~/.gps1.bash
 
+alias g='git'
+alias gi='git'
+alias gt='git'
+alias gs='git status'
+alias gsn='git status -uno'
+alias gg='git grep -F'
+alias ggi='git grep -iF'
+
 # enable color support of ls and also add handy aliases
 if [ "$TERM" != "dumb" ]; then
 	alias ll='ls -l'
