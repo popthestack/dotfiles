@@ -45,6 +45,8 @@ nnoremap <leader><space> :let @/=''<cr>
 
 hi MatchParen cterm=underline ctermbg=none ctermfg=none
 
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
+
 "Invisible character colors
 "highlight NonText guifg=#EFEFEF
 "highlight SpecialKey guifg=#EFEFEF
