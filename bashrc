@@ -83,3 +83,6 @@ stty discard undef
 # add ctrl-s as a step-forward option (i-search, whereas ctrl-r is reverse-i-search)
 stty -ixon
 
+function title {
+    echo -ne "\033]0;"$*"\007"
+}
