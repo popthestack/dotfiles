@@ -64,7 +64,7 @@ function todo() {
   # $# is the number of parameters passed in
   if [[ $# == "0" ]];
     then
-cat $TODO;
+      cat $TODO;
     else
       # $@ is a string containing all parameters
       echo "• $@" >> $TODO;
