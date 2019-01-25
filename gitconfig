@@ -9,6 +9,12 @@
 	co = checkout
 	b = branch
 	s = status
+	unstage = reset HEAD
+	d = diff
+	di = diff
+	dif = diff
+	diff-highlight = "!f() { git diff --color \"$@\" | /usr/local/share/git-core/contrib/diff-highlight/diff-highlight |less -R; }; f"
+	dh = "!f() { git diff --color \"$@\" | /usr/local/share/git-core/contrib/diff-highlight/diff-highlight |less -R; }; f"
 [color]
 	branch = auto
 	diff = auto
