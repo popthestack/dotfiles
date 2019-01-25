@@ -45,14 +45,18 @@ fi
 export PS1="\`if [ \$? != 0 ]; then echo \[\e[31m\]ಠ_ಠ \[\e[0m\]; fi\`\[\033[01;34m\]\[\033[01;32m\]\w\[\033[00;33m\] \[\033[01;36m\]λ\[\033[00m\] "
 export PS2='\[\e[m\]\[\e[01;31m\]>\[\e[m\] '
 
-export GOPATH=$HOME/go/bin
+export PATH=$HOME/bin:/usr/local/Cellar/python:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/usr/local/opt/ruby/bin:/usr/local/share/npm/bin:~/.composer/vendor/bin/:$PATH
 
-export PATH=$HOME/bin:/usr/local/Cellar/python:/usr/local/bin:/usr/local/opt/ruby/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/usr/local/Cellar/ruby/2.1.0/bin:$PATH
-export PATH=$PATH:/usr/local/Cellar/go/1.2.1/libexec/bin:$GOPATH
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin
+
+export NODE_PATH=/usr/local/lib/node_modules
 
 export CC=gcc
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 export TODO=~/Dropbox/todo.txt
 
