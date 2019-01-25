@@ -14,11 +14,17 @@ username=`whoami`
 
 alias g='git'
 alias gi='git'
-alias gt='git'
 alias gs='git status'
 alias gsn='git status -uno'
-alias gg='git grep -F'
-alias ggi='git grep -iF'
+alias gksdiff='git difftool -y -t Kaleidoscope'
+alias gg='rg -SF'
+alias ggi='rg -iF'
+
+alias npmrun='npm run -s'
+
+alias argh='sudo $(history -p \!\!)'
+
+alias nodewrap='NODE_NO_READLINE=1 rlwrap node'
 
 # enable color support of ls and also add handy aliases
 if [ "$TERM" != "dumb" ]; then
@@ -26,13 +32,14 @@ if [ "$TERM" != "dumb" ]; then
 	alias la='ls -la'
 	alias l='ls -CF'
 	alias ls='ls -G'
+	alias lh='ls -lh'
 	alias get='git'
-    #eval "`dircolors -b`"
-    alias grep='grep --exclude=".svn" --exclude=".swp" --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+  #eval "`dircolors -b`"
+  alias grep='grep --exclude=".svn" --exclude=".swp" --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
 else
-    alias grep='grep --exclude=".svn" --exclude=".swp"'
+    alias grep='grep --exclude-dir=".git" --exclude=".svn" --exclude=".swp"'
 fi
 
 PROMPT_HOSTNAME=''
