@@ -36,24 +36,11 @@ else
   alias grep='grep --exclude-dir=".git" --exclude=".svn" --exclude=".swp"'
 fi
 
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/usr/local/share/npm/bin:$PATH
-
-# export PS1="\`if [ \$? != 0 ]; then echo \[\e[31m\]ಠ_ಠ \[\e[0m\]; fi\`\[\033[01;34m\]\[\033[01;32m\]\w\[\033[00;33m\] \[\033[01;36m\]λ\[\033[00m\] "
-# export PS2='\[\e[m\]\[\e[01;31m\]>\[\e[m\] '
-
 export GOPATH=$HOME/go
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/usr/local/share/npm/bin:$PATH
 export PATH=$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin
-
-function _update_ps1() {
-  PS1="$($GOPATH/bin/powerline-go -cwd-mode plain -condensed -mode patched -modules "nix-shell,venv,ssh,cwd,perms,git,hg,jobs,exit,root,vgo" -error $?)"
-}
-
-if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
-  PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
-
+export PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH
 export NODE_PATH=/usr/local/lib/node_modules
-
 export CC=gcc
 
 # enable ctrl+o in bash on OS X
@@ -65,3 +52,6 @@ stty -ixon
 function title {
     echo -ne "\033]0;"$*"\007"
 }
+
+# make sure this is the last line
+eval "$(starship init bash)"
