@@ -20,6 +20,10 @@ alias argh='sudo $(history -p \!\!)'
 
 alias nodewrap='NODE_NO_READLINE=1 rlwrap node'
 
+alias dc='docker-compose'
+alias rm-docker='docker rm $(docker ps -q -f "status=exited");docker rmi $(docker images -q -f "dangling=true")'
+alias rm-docker-force='docker rm --force $(docker ps -q -f "status=exited");docker rmi --force $(docker images -q -f "dangling=true")'
+
 # enable color support of ls and also add handy aliases
 if [ "$TERM" != "dumb" ]; then
   alias ll='ls -l'
