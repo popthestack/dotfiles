@@ -1,9 +1,6 @@
 [user]
 	name = Ryan Martinsen
-	email = 
-[github]
-	user = 
-	token = 
+	email =
 [alias]
 	ci = commit
 	co = checkout
